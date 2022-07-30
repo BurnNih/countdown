@@ -42,6 +42,7 @@ and GPL-3.0 (http://opensource.org/licenses/GPL-3.0) licenses.
           }
           _this.options.onEnd.apply(_this);
         }
+		
         dateData = {
           years: 0,
           days: 0,
@@ -114,6 +115,7 @@ and GPL-3.0 (http://opensource.org/licenses/GPL-3.0) licenses.
       date: "July 31, 2022 00:00:00",
       refresh: 1000,
       onEnd: $.noop,
+
       render: function(date) {
         return $(this.el).html("" + date.years + " years, " + date.days + " days, " + (this.leadingZeros(date.hours)) + " hours, " + (this.leadingZeros(date.min)) + " min and " + (this.leadingZeros(date.sec)) + " sec");
       }
