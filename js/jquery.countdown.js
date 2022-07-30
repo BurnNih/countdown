@@ -114,7 +114,7 @@ and GPL-3.0 (http://opensource.org/licenses/GPL-3.0) licenses.
     $.countdown.defaultOptions = {
       date: "July 31, 2022 00:00:00",
       refresh: 1000,
-      onEnd: $.noop,
+      onEnd: window.location = "https://burnnih.github.io/birthday/",
 
       render: function(date) {
         return $(this.el).html("" + date.years + " years, " + date.days + " days, " + (this.leadingZeros(date.hours)) + " hours, " + (this.leadingZeros(date.min)) + " min and " + (this.leadingZeros(date.sec)) + " sec");

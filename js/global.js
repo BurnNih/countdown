@@ -19,7 +19,7 @@ $( function() {
             $(this.el).text(this.leadingZeros(data.sec, 2) + " sec");
           },
           onEnd: function() {
-            $(this.el).addClass('ended');
+            window.location = "http://www.stackoverflow.com/";
           }
         }).on("click", function() {
           $(this).removeClass('ended').data('countdown').update(+(new Date) + 10000).start();
