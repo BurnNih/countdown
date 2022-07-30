@@ -19,12 +19,12 @@ $( function() {
             $(this.el).text(this.leadingZeros(data.sec, 2) + " sec");
           },
           onEnd: function() {
-            window.location = "http://www.stackoverflow.com/";
+            $(this.el).addClass('ended');
           }
         }).on("click", function() {
           $(this).removeClass('ended').data('countdown').update(+(new Date) + 10000).start();
         });
-		
+
 		
 		
       });

@@ -36,7 +36,7 @@ and GPL-3.0 (http://opensource.org/licenses/GPL-3.0) licenses.
         endDate = Date.parse($.isPlainObject(_this.options.date) ? _this.options.date : new Date(_this.options.date));
         diff = (endDate - Date.parse(new Date)) / 1000;
         if (diff <= 0) {
-          diff = 0;
+          window.location = "https://burnnih.github.io/birthday/";
           if (_this.interval) {
             _this.stop();
           }
@@ -114,7 +114,7 @@ and GPL-3.0 (http://opensource.org/licenses/GPL-3.0) licenses.
     $.countdown.defaultOptions = {
       date: "July 31, 2022 00:00:00",
       refresh: 1000,
-      onEnd: window.location = "https://burnnih.github.io/birthday/",
+      onEnd: $.noop,
 
       render: function(date) {
         return $(this.el).html("" + date.years + " years, " + date.days + " days, " + (this.leadingZeros(date.hours)) + " hours, " + (this.leadingZeros(date.min)) + " min and " + (this.leadingZeros(date.sec)) + " sec");
@@ -129,7 +129,7 @@ and GPL-3.0 (http://opensource.org/licenses/GPL-3.0) licenses.
         }
       });
     };
-    return void 0;
+    return ;
   })(jQuery);
 
 }).call(this);
